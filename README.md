@@ -1,29 +1,11 @@
-# vue-sidenavbar-demo
+## Vue Sidenavbar Demo
+
+This is a demo vuejs application showcasing vue-sidenavbar npm package.
+https://github.com/pavloskii/vue-sidenavbar
 
 ## Project setup
+
 ```
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
