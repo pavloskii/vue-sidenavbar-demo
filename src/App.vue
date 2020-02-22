@@ -1,32 +1,91 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <VueSidenavbar>
+      <VueSidenavbarItem label="HOME" icon="fas fa-home" to="/" />
+      <VueSidenavbarItem
+        label="PROFILE"
+        icon="fas fa-address-card"
+        to="/profile"
+      />
+      <VueSidenavbarItem label="PHOTOS" icon="fas fa-image" to="/photos" />
+      <VueSidenavbarItem
+        label="LOGOUT"
+        icon="fas fa-sign-out-alt"
+        tag="a"
+        @click="logout"
+      />
+    </VueSidenavbar>
+
+    <main>
+      <transition name="fade" mode="out-in">
+        <router-view />
+      </transition>
+    </main>
   </div>
 </template>
 
+<script>
+import { VueSidenavbar, VueSidenavbarItem } from "vue-sidenavbar";
+export default {
+  methods: {
+    logout() {
+      event.preventDefault();
+      alert("You can not logout, I will take you to home page!!!");
+      this.$router.push("/");
+    }
+  },
+  components: {
+    VueSidenavbar,
+    VueSidenavbarItem
+  }
+};
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #29333f;
 }
 
-#nav {
-  padding: 30px;
+.active {
+  background-color: #29333f !important;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+main {
+  padding: 16px;
+  margin: 60px auto;
+  max-width: 900px;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+.card {
+  background-color: #445871;
+  padding: 2px 16px;
+  color: white;
+}
+
+.card img {
+  max-width: 100%;
+}
+
+@media (max-width: 640px) {
+  main {
+    margin: 80px 5px 5px 5px;
+  }
+}
+
+a {
+  color: white;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.3s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
 }
 </style>
