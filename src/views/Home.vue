@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <h1>HOME: HTML Ipsum Presents</h1>
+    <h1>HTML Ipsum Presents</h1>
     <img src="@/assets/mountains.jpg" alt="Mountains" />
     <p>
       Image by

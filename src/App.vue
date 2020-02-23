@@ -52,9 +52,8 @@ body {
 }
 
 main {
-  padding: 16px;
-  margin: 60px auto;
-  max-width: 900px;
+  margin: 100px auto;
+  max-width: 1000px;
 }
 
 .card {
@@ -69,12 +68,27 @@ main {
 
 @media (max-width: 640px) {
   main {
-    margin: 80px 5px 5px 5px;
+    margin: 90px 5px 5px 5px;
   }
 }
 
 a {
   color: white;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 15px;
+  color: white;
+  background-color: #8c2f39;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+}
+button:hover {
+  opacity: 0.7;
 }
 
 .fade-enter-active,
@@ -87,5 +101,9 @@ a {
 .fade-enter,
 .fade-leave-active {
   opacity: 0;
+}
+
+.w-100 {
+  width: 100%;
 }
 </style>
