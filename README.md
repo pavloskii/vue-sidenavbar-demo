@@ -9,3 +9,6 @@ https://github.com/pavloskii/vue-sidenavbar
 npm install
 npm run serve
 ```
+
+#Live demo
+https://vue-sidenavbar-demo.netlify.com/
